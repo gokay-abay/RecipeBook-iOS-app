@@ -13,6 +13,7 @@
 		6EF4957925B75392001F9F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF4957725B75392001F9F21 /* Main.storyboard */; };
 		6EF4957B25B75394001F9F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF4957A25B75394001F9F21 /* Assets.xcassets */; };
 		6EF4957E25B75394001F9F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF4957C25B75394001F9F21 /* LaunchScreen.storyboard */; };
+		6EF4958A25B7666D001F9F21 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4958925B7666D001F9F21 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6EF4957A25B75394001F9F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EF4957D25B75394001F9F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EF4957F25B75394001F9F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EF4958925B7666D001F9F21 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6EF4957A25B75394001F9F21 /* Assets.xcassets */,
 				6EF4957C25B75394001F9F21 /* LaunchScreen.storyboard */,
 				6EF4957F25B75394001F9F21 /* Info.plist */,
+				6EF4958925B7666D001F9F21 /* Recipe.swift */,
 			);
 			path = CookIt;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EF4957625B75392001F9F21 /* ViewController.swift in Sources */,
+				6EF4958A25B7666D001F9F21 /* Recipe.swift in Sources */,
 				6EF4957225B75392001F9F21 /* AppDelegate.swift in Sources */,
 				6EF4957425B75392001F9F21 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNL5VCLKTV;
 				INFOPLIST_FILE = CookIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNL5VCLKTV;
 				INFOPLIST_FILE = CookIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
