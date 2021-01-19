@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   @IBOutlet weak var tableView: UITableView!
   
-  let recipes: [Recipe] = [.init(title: "Best Brownies", steps: ["step1","step2","step3"]), .init(title: "Banana Bread", steps: ["step1","step2","step3"]), .init(title: "Chocolate Chip Cookies", steps: ["step1","step2","step3"])]
+  let recipes: [Recipe] = [Recipe(title: "Best Brownies", steps: ["step1","step2","step3"]), Recipe(title: "Banana Bread", steps: ["step1","step2","step3"]), Recipe(title: "Chocolate Chip Cookies", steps: ["step1","step2","step3"])]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,6 +31,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
     cell.textLabel?.text = recipes[indexPath.row].title
     return cell
+  }
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let recipeDetailViewController = segue.destination as? RecipeDetailViewController, let index = tableView.indexPathForSelectedRow?.row {
+      //  the recipe only gets populated if we know the destination if our detail view AND we have a recipe row selected from the table
+      recipeDetailViewController.recipe = recipes[index]
+    }
   }
 }
 
