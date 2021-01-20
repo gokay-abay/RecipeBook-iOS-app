@@ -13,6 +13,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate, UITable
   @IBOutlet weak var imageView: UIImageView!
   
   var recipe: Recipe?
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +21,23 @@ class RecipeDetailViewController: UIViewController, UITableViewDelegate, UITable
         // Do any additional setup after loading the view.
       tableView.delegate = self
       tableView.dataSource = self
+      self.title = recipe?.title
+      
+      if let url = URL(string: recipe!.imageURL), let data = try? Data(contentsOf: url), let _ = UIImage(data: data) {
+        imageView.image = UIImage(data: data)
+      }
+        // populate the imageview if recipe.imageUrl is in fact a URL that contains data
+      
     }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if let unwrappedRecipe = recipe {
-      return unwrappedRecipe.steps.count
-    }
-    return 0
+    return recipe?.steps.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "stepCell", for: indexPath)
     
-    cell.textLabel?.text = "steps"
+    cell.textLabel?.text = recipe?.steps[indexPath.row]
     
     return cell
     

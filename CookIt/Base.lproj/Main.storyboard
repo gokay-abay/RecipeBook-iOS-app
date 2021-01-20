@@ -55,13 +55,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rE-uf-Pb4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dHe-Av-jqP">
-                                <rect key="frame" x="0.0" y="382" width="414" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dHe-Av-jqP">
+                                <rect key="frame" x="0.0" y="460" width="414" height="402"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stepCell" id="rZi-ym-U6g">
@@ -74,16 +69,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-ia-waK">
-                                <rect key="frame" x="0.0" y="309" width="414" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-ia-waK">
+                                <rect key="frame" x="0.0" y="387" width="414" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="FfJ-WX-UsB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0rE-uf-Pb4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="291"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="Cje-8X-bK7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tpc-wV-T50"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0rE-uf-Pb4" firstAttribute="top" secondItem="tpc-wV-T50" secondAttribute="top" id="2ye-F9-9fM"/>
+                            <constraint firstItem="dHe-Av-jqP" firstAttribute="trailing" secondItem="tpc-wV-T50" secondAttribute="trailing" id="5n4-fE-0yt"/>
+                            <constraint firstItem="0rE-uf-Pb4" firstAttribute="leading" secondItem="tpc-wV-T50" secondAttribute="leading" id="7dI-j1-ai9"/>
+                            <constraint firstItem="dHi-ia-waK" firstAttribute="trailing" secondItem="tpc-wV-T50" secondAttribute="trailing" id="FkU-Zn-LLs"/>
+                            <constraint firstItem="dHe-Av-jqP" firstAttribute="leading" secondItem="tpc-wV-T50" secondAttribute="leading" id="aqh-XP-2bC"/>
+                            <constraint firstItem="dHe-Av-jqP" firstAttribute="top" secondItem="dHi-ia-waK" secondAttribute="bottom" constant="8" id="klb-zl-BPH"/>
+                            <constraint firstItem="dHe-Av-jqP" firstAttribute="bottom" secondItem="tpc-wV-T50" secondAttribute="bottom" id="pSg-LK-X1h"/>
+                            <constraint firstItem="dHi-ia-waK" firstAttribute="top" secondItem="0rE-uf-Pb4" secondAttribute="bottom" constant="8" id="q8s-Gs-tKA"/>
+                            <constraint firstItem="0rE-uf-Pb4" firstAttribute="trailing" secondItem="tpc-wV-T50" secondAttribute="trailing" id="qAq-E0-QPc"/>
+                            <constraint firstItem="dHi-ia-waK" firstAttribute="leading" secondItem="tpc-wV-T50" secondAttribute="leading" id="tUj-Qh-Xbp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aqu-CD-a2K"/>
                     <connections>

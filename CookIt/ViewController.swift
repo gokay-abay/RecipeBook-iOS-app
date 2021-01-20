@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   @IBOutlet weak var tableView: UITableView!
   
-  let recipes: [Recipe] = [Recipe(title: "Best Brownies", steps: ["step1","step2","step3"]), Recipe(title: "Banana Bread", steps: ["step1","step2","step3"]), Recipe(title: "Chocolate Chip Cookies", steps: ["step1","step2","step3"])]
+  let recipes: [Recipe] = [.init(title: "Best Brownies", steps: ["step1","step2", "step3"], imageURL: "https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg"), .init(title: "Banana Bread", steps: ["step1","step2", "step3"], imageURL: "https://images.pexels.com/photos/830894/pexels-photo-830894.jpeg"), .init(title: "Chocolate Chip Cookies", steps: ["step1","step2", "step3"], imageURL: "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg")]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,6 +30,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
     cell.textLabel?.text = recipes[indexPath.row].title
+    
+    let recipe = recipes[indexPath.row]
+    
+    if let url = URL(string: recipe.imageURL), let data = try? Data(contentsOf: url) {
+      cell.imageView?.image = UIImage(data: data)
+    }
+
     return cell
   }
   
